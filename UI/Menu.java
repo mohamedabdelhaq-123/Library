@@ -27,8 +27,11 @@ abstract class  Menu{
             String input=genericScn.nextLine();
             try 
             {
-                int userChoice= Integer.parseInt(input);  // convert to integer
-                chooseOption(userChoice);
+                int userChoice= Integer.parseInt(input);  // convert to integer             
+                if(userChoice==0)
+                    break;
+                else
+                     chooseOption(userChoice);
             } 
             catch (Exception e) 
             {
