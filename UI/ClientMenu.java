@@ -12,13 +12,16 @@ public class ClientMenu extends Menu{   // CRUD client  1=> create client ===> u
     {
         this.mainLibrary= library;
         this.genericScn=ClientScn;
-        options="=====> Client Menu <=====" +'\n' +"1- Create Clients "+'\n'+ "2- Read Client"+'\n'+"3- Update Clients "+'\n'+ "4- Delete Clients"+'\n' ;
+        options="=====> Client Menu <=====" +'\n' +"1- Create Clients "+'\n'+ "2- Read Client"+'\n'+"3- Update Clients "+'\n'+ "4- Delete Clients"+'\n'+ "0- Exit Client Menu"+'\n'  ;
     }
 
     void chooseOption(int n)
     {
         switch (n) 
         {
+            case 0:
+                System.out.println("Returning to Main Menu...");
+                break;
             case 1:
                 // Create 
                 createClient();    
