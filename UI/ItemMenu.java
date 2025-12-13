@@ -13,13 +13,16 @@ public class ItemMenu extends Menu{  ///
     {
         this.mainLibrary= library;
         this.genericScn=ItemScn;
-        options="=====>Item Menu<====="+'\n'+"1- Create Item "+'\n'+ "2- Read Item"+'\n'+"3- Update Item "+'\n'+ "4- Delete Item"+'\n' ;
+        options="=====>Item Menu<====="+'\n'+"1- Create Item "+'\n'+ "2- Read Item"+'\n'+"3- Update Item "+'\n'+ "4- Delete Item"+'\n'+ "0- Exit Item Menu"+'\n' ;
     }
 
     void chooseOption(int n)
     {
         switch (n) 
         {
+            case 0:
+                System.out.println("Exiting system...");
+                break;
             case 1:
                 // Create 
                 createItem();
