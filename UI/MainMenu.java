@@ -14,7 +14,7 @@ public class MainMenu extends Menu{  // Iteam or client
         this.genericScn= new Scanner(System.in);
         objClientMenu= new ClientMenu(this.genericScn,this.mainLibrary);
         objItemMenu =new ItemMenu(this.genericScn,this.mainLibrary);
-        options="=====> Main Menu <=====" +'\n'+ "1- Clients "+ '\n' + "2- Iteams";
+        options="=====> Main Menu <=====" +'\n'+ "1- Clients "+ '\n' + "2- Iteams"+ '\n'+ "0- Exit Main Menu";
     }
 
     void chooseOption(int n)
@@ -28,9 +28,11 @@ public class MainMenu extends Menu{  // Iteam or client
                 // iteam menu
                 objItemMenu.runMenu();
                 break;
-
+            case 0:
+                System.out.println("Exiting system...");
+                break;
             default:
-
+                System.out.println("Invalid choice! Please choose 0-2");
                 break;
         }
     }
